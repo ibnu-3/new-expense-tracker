@@ -4,7 +4,7 @@ const userSchema= new mongoose.Schema({
     fullName:{type:String, required:true, },
     email:{type:String,unique:true, required:true, },
     password:{type:String, required:true, },
-    profilePic:{type:String, default:'', },
+    profilePic:{type:String, default:'https://images.pexels.com/photos/792381/pexels-photo-792381.jpeg', },
     isAdmin:{type:Boolean,default:false,required:true },
 },{timestamps:true});
 const User = mongoose.model('User', userSchema)
