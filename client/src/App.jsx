@@ -13,7 +13,8 @@ const App = () => {
   return (
    <BrowserRouter>
     <AuthProvider>
-      <div>
+      
+      <div className="max-w-7xl mx-auto">
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
