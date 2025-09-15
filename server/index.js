@@ -15,28 +15,22 @@ app.use(
     credentials: true,
   })
 );
+app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cookieParser());
 
-mongoose
-  .connect(process.env.MONGO)
-  .then(() => console.log("MongoDB Connected!".cyan.bold.underline))
-  .catch(() => console.log("MongoDB error:".red, error));
-const port = process.env.PORT;
 
 app.use("/api/users", userRoutes);
 app.get("/", (req, res) => {
   res.send("Server running");
 });
-app.get("/some-route", (req, res) => {
-  if (req.cookies && req.cookies.myCookie) {
-    res.send(`Cookie value: ${req.cookies.myCookie}`);
-  } else {
-    res.send("Cookie not found");
-  }
-});
 
+mongoose
+  .connect(process.env.MONGO)
+  .then(() => console.log("MongoDB Connected!".cyan.bold.underline))
+  .catch(() => console.log("MongoDB error:".red, error));
+
+const port = process.env.PORT;
 app.listen(port, () => {
   console.log(`Server is running on port:${port}`.yellow.bold);
 });
