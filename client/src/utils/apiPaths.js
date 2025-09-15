@@ -1,1 +1,0 @@
-export const BASE_URL= 'https://potential-space-halibut-x5q45qwxqqv7cp4v4-8080.app.github.dev/api'
