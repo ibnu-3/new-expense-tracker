@@ -16,7 +16,7 @@ const PostCard = ({ post }) => {
       </div>
 
       <div className="mt-3 px-3">
-        <h1 className="block text-slate-800">{post.title}</h1>
+        <h1 className="block text-slate-800 font-bold capitalize">{post.title}</h1>
         <p className="text-slate-500 ">{post.content.slice(0, 30)}...</p>
       </div>
       <div className="flex justify-between items-center">

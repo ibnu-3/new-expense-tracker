@@ -20,8 +20,8 @@ const Home = () => {
   return (
     <div>
       <Navbar/>
-      <div>
-        <h1>Posts</h1>
+      <div className='mt-4'>
+        <h1 className='text-center text-xl font-bold underline'>Posts</h1>
         <div className='mt-4 px-3 sm:px-6'>
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 '>
             {posts.map((post)=>(
