@@ -45,9 +45,9 @@ const App = () => {
         <Route
           path="/posts/:id"
           element={
-            <PrivateRoute>
+         
               <PostDetail />
-            </PrivateRoute>
+            
           }
         />
       </Routes>
